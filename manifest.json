@@ -1,0 +1,29 @@
+{
+	"manifest_version" : 2,
+	"name" : "京东抢拍",
+	"description" : "京东夺宝岛抢拍-谁与争锋",
+	"version" : "0.1",
+	"permissions" : [
+		"tabs",
+		"http://auction.jd.com/*"
+	],
+	"icons" : {
+		"16":"imgs/Z16.png", 
+		"48":"imgs/Z48.png", 
+		"128":"imgs/Z128.png"
+	},
+	"web_accessible_resources" : [
+		"js/jquery.min.js", "js/jd.js"
+	],
+	"content_scripts" : [
+		{
+			"matches" : ["http://auction.jd.com/detail/*"],
+			"css" : ["css/jd.css"],
+			"js" : ["js/jquery.min.js", "js/jd.js"]
+		}
+	],
+	"browser_action" : {
+		"default_icon" : "imgs/Z128.png",
+		"default_title" : "京东夺宝岛扛把子"
+	}
+}
