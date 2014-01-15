@@ -16,10 +16,8 @@ var code = "<div id='qp_div'>"
 		+ "<input type='button' value='仅刷价格' id='qp_btn_refresh' class='qp_btn' />&nbsp;&nbsp;&nbsp;&nbsp;"
 		+ "【开启控制台可查看抢拍提示】</div>";
 $('body').prepend(code);
-$('#qp_job_state').val("未启动…");
 $('#qp_price_limit').val(priceLimit);
 $('#qp_max_price').val(priceLimit);
-$('#qp_frequency').val("2");
 
 $('#qp_btn_refresh').on('click', function(){queryPrice(uid, priceLimit)});
 $('#qp_btn_begin').on('click', function(){crazyBuying(uid, priceLimit)});
